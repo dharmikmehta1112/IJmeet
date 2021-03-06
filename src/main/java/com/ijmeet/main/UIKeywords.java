@@ -140,6 +140,46 @@ public class UIKeywords {
 		
 	} // end of method
 	
+	
+	/**
+	 * Use to check @Webelement element is displayed on page.
+	 * 
+	 * @return true if displayed
+	 * @param element as {@code WebElement}.
+	 */
+	public static boolean isElementDisplayed(WebElement element) {
+		WaitsInHelp.webDriverWaitInSeconds(element, Constants.WebDriverWaitTimeOutInSec, Constants.WebDriverWaitSleepInMilli);
+		LOG.info("Checking element: " +element+ " is displayed on page.");
+		return element.isDisplayed();
+		
+	} // end of method
+	
+	/**
+	 * Use to check @Webelement element is enabled on page.
+	 * 
+	 * @return true if enabled
+	 * @param element as {@code WebElement}.
+	 */
+	public static boolean isElementEnabled(WebElement element) {
+		WaitsInHelp.webDriverWaitInSeconds(element, Constants.WebDriverWaitTimeOutInSec, Constants.WebDriverWaitSleepInMilli);
+		LOG.info("Checking element: " +element+ " is enabled on page.");
+		return element.isEnabled();
+		
+	} // end of method
+	
+	/**
+	 * Use to check @Webelement element is selected on page.
+	 * 
+	 * @return true if selected
+	 * @param element as {@code WebElement}.
+	 */
+	public static boolean isElementSelected(WebElement element) {
+		WaitsInHelp.webDriverWaitInSeconds(element, Constants.WebDriverWaitTimeOutInSec, Constants.WebDriverWaitSleepInMilli);
+		LOG.info("Checking element: " +element+ " is selected on page.");
+		return element.isSelected();
+		
+	} // end of method
+	
 	/**
 	 * Use to hover the mouse to @Webelement element.
 	 * 
